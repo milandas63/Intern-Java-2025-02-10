@@ -1,0 +1,91 @@
+Start Date: 10-02-2025
+Time: Monday to Friday (10:00 am-11:30 am)
+Course: JAVA FULL-STACK
+Whatsapp group: IIG
+GitHub-ID: https://github.com/milandas63/Intern-Java-2025-02-10
+Wifi Password: #A1B2C3E5D4#
+
+Participants:
+MILAN DAS                   7978168568  milan.das@iigvarsity.com            milandas63
+1.  Vaibhav Thete           8484825894  vthete60@gmail.com                  VaibhavT-sudo
+2.  Chinmaya Ranjan Rout    9040233900  chinmayarout318@gmail.com           chinmayrout318
+                            6370934900
+3.  Barshita Pattnaik       7684806111  barshita07@gmail.com                Barshitapattnaik
+
+
++--------------------+
+| Monday, 10-02-2025 |  Day-01
++--------------------+
+    =   How many keywords are there in Java?
+            LIST OF RESERVE WORDS/KEY WORDS IN JAVA (53 words)
+            abstract    continue    for         new         switch
+            assert***   default     goto*       package     synchronized
+            boolean     do          if          private     this
+            break       double      implements  protected   throw
+            byte        else        import      public      throws
+            case        enum****    instanceof  return      transient
+            catch       extends     int         short       try
+            char        final       interface   static      void
+            class       finally     long        strictfp**  volatile
+            const*      float       native      super       while
+            null        true        false
+
+            *       not used
+            **      added in 1.2
+            ***     added in 1.4
+            ****    added in 5.0
+
+    =   There are two versions of for loop
+
+        1.  for([initializer] ; [condition] ; [increment/decrement]) [{]...[}]
+
+            for(int i=1; i<3; i++)
+                System.out.println(i);
+
+            for(;;)
+                System.out.println("Java");
+
+            String text = "";
+            for(int i=0; i<10; i++) {
+                if(i%2) {
+                    text = i + "is an Even Number";
+                } else {
+                    text = i + "is an Odd Number";
+                }
+                System.out.println(text);
+            }
+
+        2.  for loop for collection:
+
+            String names[] = {"Red","Green","Blue","White","Black","Purple"};
+
+            for(<data-type-of-item> variable : collection-variable) [{] ... [}]
+
+            for(String x:names) {
+                System.out.println(x);
+            }
+
+
+    =   The Java programming language comes in 3 flavors:
+        1.  Java2SE (Java 2 Standard Edition)
+        2.  Java2EE (Java 2 Enterprise Edition)
+        3.  Java2ME (Java 2 Micro Edition)
+
+    =   Java programmes are of 3 types:
+        1.  Application
+            Starts from main() method
+        2.  Applet
+        3.  Servlet
+
+    =   ASSIGNMENT:
+        38: Write a function that takes a list of strings and prints them, one per line, in
+            a rectangular frame.
+            sentence = "The war of Russia and Ukrain ends"
+                **********
+                * The    *
+                * war    *
+                * Russia *
+                * and    *
+                * Ukrain *
+                * ends   *
+                **********
