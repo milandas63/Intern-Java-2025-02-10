@@ -1,0 +1,178 @@
+Start Date: 10-02-2025
+Time: Monday to Friday (10:00 am-11:30 am)
+Course: JAVA FULL-STACK
+Whatsapp group: IIG
+GitHub-ID: https://github.com/milandas63/Intern-Java-2025-02-10
+Wifi Password: #A1B2C3E5D4#
+
+Participants:
+MILAN DAS                   7978168568  milan.das@iigvarsity.com            milandas63
+1.  Vaibhav Thete           8484825894  vthete60@gmail.com                  VaibhavT-sudo
+2.  Chinmaya Ranjan Rout    9040233900  chinmayarout318@gmail.com           chinmayarout318
+                            6370934900
+3.  Barshita Pattnaik       7684806111  barshita07@gmail.com                Barshitapattnaik
+
+
++--------------------+
+| Monday, 10-02-2025 |  Day-01
++--------------------+
+    =   How many keywords are there in Java?
+            LIST OF RESERVE WORDS/KEY WORDS IN JAVA (53 words)
+            abstract    continue    for         new         switch
+            assert***   default     goto*       package     synchronized
+            boolean     do          if          private     this
+            break       double      implements  protected   throw
+            byte        else        import      public      throws
+            case        enum****    instanceof  return      transient
+            catch       extends     int         short       try
+            char        final       interface   static      void
+            class       finally     long        strictfp**  volatile
+            const*      float       native      super       while
+            null        true        false
+
+            *       not used
+            **      added in 1.2
+            ***     added in 1.4
+            ****    added in 5.0
+
+    =   There are two versions of for loop
+
+        1.  for([initializer] ; [condition] ; [increment/decrement]) [{]...[}]
+
+            for(int i=1; i<3; i++)
+                System.out.println(i);
+
+            for(;;)
+                System.out.println("Java");
+
+            String text = "";
+            for(int i=0; i<10; i++) {
+                if(i%2) {
+                    text = i + "is an Even Number";
+                } else {
+                    text = i + "is an Odd Number";
+                }
+                System.out.println(text);
+            }
+
+        2.  for loop for collection:
+
+            String names[] = {"Red","Green","Blue","White","Black","Purple"};
+
+            for(<data-type-of-item> variable : collection-variable) [{] ... [}]
+
+            for(String x:names) {
+                System.out.println(x);
+            }
+
+
+    =   The Java programming language comes in 3 flavors:
+        1.  Java2SE (Java 2 Standard Edition)
+        2.  Java2EE (Java 2 Enterprise Edition)
+        3.  Java2ME (Java 2 Micro Edition)
+
+    =   Java programmes are of 3 types:
+        1.  Application
+            Starts from main() method
+        2.  Applet
+        3.  Servlet
+
+    =   ASSIGNMENT:
+        1:  Write a function that takes a list of strings and prints them, one per line, in
+            a rectangular frame.
+            sentence = "The war of Russia and Ukrain ends"
+                **********
+                * The    *
+                * war    *
+                * Russia *
+                * and    *
+                * Ukrain *
+                * ends   *
+                **********
+
++---------------------+
+| Tuesday, 11-02-2025 |  Day-02
++---------------------+
+    =   What is an Array?
+        Array is a collection of data items stored in one variable name. Arrays are
+        defined by embedding the data within curly braces {}.
+        Example:
+            String[] week_days = new String[7];
+        The above array declaration creates a week_days array with 7 cells, but the
+        content of the cells are empty.
+            String[] week_days = new String[7] {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+            String[] week_days = {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+
+        print_days({"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"});   // Wrong
+        print_days(new String[7] {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"});   // Wrong
+        
+
+        public void print_days(String[] week_days) {
+            for(int i=0; i<week_days.length; i++) {
+                System.out.println(week_days[i]);
+            }
+        }
+
+        There are multidimensional arrays also. Multidimensional arrays are declared by
+        two pairs of square brackets [][].
+
+        +------+--------------+-----------+-------+-----------+
+        | 1    | Milan        | Das       | Male  | Teacher   |
+        +------+--------------+-----------+-------+-----------+
+        | 2    | Barshita     | Pattnaik  | Female| Student   |
+        +------+--------------+-----------+-------+-----------+
+        | 3    | Chinmaya     | Rout      | Male  | Student   |
+        +------+--------------+-----------+-------+-----------+
+        | 4    | Vaibhav      | Thete     | Male  | Student   |
+        +------+--------------+-----------+-------+-----------+
+
+        String[][] members = new String[4][5];
+        String[] members[] = new String[][] { {"","","","",""},
+                                              {"","","",""},
+                                              {"","",""},
+                                              {"","","","",""}
+                                            };
+
+
+    =   In Java language you can write 3 types of programs:
+        1.  Application: That starts from the "public static void main(String[])" method
+        2.  Applet:      That is written to run from within an internet web browser
+        3.  Servlet:     Java programs that run on a server machine on receiving request
+                         from the client machine
+
+    =   How many types of computer programming languages are there?
+        There are 3 types of computer programming languages:
+        1.  Passive language
+            It is a computer programming language that is used from presentation purpose
+            only. It is used to show some data on the output device. These languages are
+            not capable of adding 5 + 3 and providing the result 8. Examples of such
+            langauges are:
+                1. HTML (Hyper Text Markup Language)
+                2. SGML (Standard Generalized Markup Language)
+
+        2.  Active language
+            Active languages are the common computer languages like C, C++, Java, Pascal,
+            etc. They are created to solve critical problems. They are a list of features:
+            a)  They executed by sequence of line numbers
+            b)  Looping: they can iterate across a set lines repeatedly
+            c)  Condition: they can check conditions and take course of program accordingly
+            d)  Computation: they can execute complex equations and determine the result
+            They reside and run on the client machine.
+
+        3.  Dynamic language
+            Those programmes that reside in the server machine, on receving request from
+            the client machine, it runs using the resources of the server machine and 
+            send the result to the client machine. The result of dynamic language program
+            is sent in form of passive language.
+
+
+    =   ASSIGNMENT:
+        1:  Write a program to convert all digits into a number to words?
+            Example: 12345 = One Two Three Four Five
+                     03786 = Zero Three Seven Eight Six
+                     72913 = Seven Two Nine One Three
+
+
+        2:  Print all PRIME NUMBERS between 2 given numbers?
+            Say: 1500 and 3000
+
