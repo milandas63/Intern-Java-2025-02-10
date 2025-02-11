@@ -1,0 +1,40 @@
+1:  Write a program to convert all digits into a number to words?
+    Example: 12345 = One Two Three Four Five
+             03786 = Zero Three Seven Eight Six
+             72913 = Seven Two Nine One Three
+Code-
+
+
+2:  Print all PRIME NUMBERS between 2 given numbers?
+    Say: 1500 and 3000
+Code-
+package start;
+
+public class PrimeNumbersRange {
+	public static void main(String[] args) {
+        int start = 1500;
+        int end = 3000;
+        
+        System.out.println("Prime numbers between " + start + " and " + end + " are:");
+        
+        for (int num = start; num <= end; num++) {
+            if (isPrime(num)) {
+                System.out.print(num + " ");
+            }
+        }
+    }
+
+    public static boolean isPrime(int num) {
+        if (num < 2) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+}
+
