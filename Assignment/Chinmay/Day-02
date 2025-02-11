@@ -17,7 +17,8 @@ public class Digit2Word {
 			System.out.print(nums[i]+": ");
 			for(int j=0; j<nums[i].length(); j++) {
 				c = nums[i].charAt(j);
-				
+				//s = String.valueOf(c);
+				//n = Integer.parseInt(s);
 				
 				n = ((int)c) - 48;
 				System.out.print(words[n]+" ");
@@ -27,6 +28,7 @@ public class Digit2Word {
 	}
 
 }
+
 
 
 
