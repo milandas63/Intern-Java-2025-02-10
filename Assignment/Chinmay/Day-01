@@ -1,4 +1,4 @@
-Write a function that takes a list of strings and prints them, one per line, in
+Q1.Write a function that takes a list of strings and prints them, one per line, in
             a rectangular frame.
             sentence = "The war of Russia and Ukrain ends"
                 **********
@@ -9,6 +9,7 @@ Write a function that takes a list of strings and prints them, one per line, in
                 * Ukrain *
                 * ends   *
                 **********
+Code-
 package start;
 
 public class RectangularFrame {
