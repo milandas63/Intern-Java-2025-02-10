@@ -261,3 +261,17 @@ MILAN DAS                   7978168568  milan.das@iigvarsity.com            mila
         To compile a program which contains the package statement, type:
             javac -d . Empty.java
 
+    =   Create a package in the name com.stringer
+        Within this package, create a file to stretch string (Stretcher.java) values
+        by adding the text sent in the parameter. The methods in the package are likely:
+            String stretch(String data, int width, char whichSize, char padChar)
+            String stretch(String data, int width, char whichSize)   
+                // if padChar is not given, space is added
+            String replicate(String text, int times)
+            String padL
+            String padR
+            String padC
+            String justifyL
+            String justifyR
+            String justifyC
+
