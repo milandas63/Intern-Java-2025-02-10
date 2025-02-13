@@ -4,6 +4,31 @@ Q1-Flip the case of all characters in a given String?
 
 Code------------------------------------------------------------
 public class CaseFlipper {
+    public static void main(String[] args) {
+        String input = "Quick Brown Fox Jumps Opver The Lazy Dog";
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+
+            
+            if (c >= 'A' && c <= 'Z') {
+                result.append((char) (c + 32)); 
+            } 
+            else if (c >= 'a' && c <= 'z') {
+                result.append((char) (c - 32)); 
+            } 
+            else {
+                result.append(c); 
+            }
+        }
+
+        System.out.println("Original: " + input);
+        System.out.println("Invert:   " + result.toString());
+    }
+}
+****************************************************************
+public class CaseFlipper {
 	public static void main(String[] args) {
         String text = "Quick Brown Fox Jumps Over The Lazy Dog";
         String invertedText = flipCase(text);
