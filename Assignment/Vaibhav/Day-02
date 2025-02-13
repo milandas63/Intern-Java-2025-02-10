@@ -1,0 +1,65 @@
+package java_2;
+//Write a program to convert all digits into a number to words
+
+//12345 = One Two Three Four Five
+
+public class Convert {
+	public static void main(String[] args) {
+		String words[] = { "Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine" };
+		String num[] = { "12345", "23456", "34567", "78915", "7978168568" };
+
+		int n;
+		char c;
+		String s;
+		for (int i = 0; i < num.length; i++) {
+			System.out.print(num[i] + " : ");
+
+			for (int j = 0; j < num[i].length(); j++) {
+
+				c = num[i].charAt(j);
+
+				s = String.valueOf(c);
+				n = Integer.parseInt(s);
+				// n = ((int)c) - 48;
+				System.out.print(words[n] + " ");
+			}
+
+			System.out.println();
+		}
+	}
+}
+
+
+
+
+package java_2;
+//Print all PRIME NUMBERS between 2 given numbers
+
+public class primeno {
+	public static void main(String[] args) {
+		int start = 1500;
+		int end = 3000;
+		int count = 0;
+		boolean yn;
+
+		for (int i = start; i <= end; i++) {
+			yn = true;
+			for (int j = 2; j < i; j++) {
+				if (i % j == 0) {
+					yn = false;
+					break;
+				}
+			}
+
+			if (yn) {
+				System.out.print(i + " ");
+				count++;
+				if (count >= 10) {
+					System.out.println();
+					count = 0;
+				}
+			}
+		}
+	}
+
+}
