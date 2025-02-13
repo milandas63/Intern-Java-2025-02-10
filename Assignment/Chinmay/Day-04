@@ -2,7 +2,7 @@ Q1-Flip the case of all characters in a given String?
    Original:Quick Brown Fox Jumps Over The Lazy Dog.
    Invert:  qUICK bROWN fOX jUMPS oVER tHE lAZY dOG.
 
-Code-
+Code------------------------------------------------------------
 package start;
 
 public class CaseFlipper {
