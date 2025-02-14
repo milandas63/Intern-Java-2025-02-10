@@ -1,0 +1,103 @@
+1:  Sum the ASCII values of the characters in a given String?
+            Example:    Sarah
+                        83 + 97 + 114 + 97 + 104 = ?
+Code---------------------------------------------------------
+package start;
+
+public class MinMax {
+	static int[] findMinMax(int[] arr, int n)
+    {
+        int min = arr[0];
+        int max = arr[0];
+ 
+        for (int i = 0; i < n; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+            else if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        int[] Arr = new int[2];
+        Arr[0] = min;
+        Arr[1] = max;
+        return Arr;
+    }
+ 
+    public static void main(String[] args)
+    {
+        int[] arr = {25,400,345,71,33,511,666,786,332,44,81};
+          int N = arr.length;
+ 
+        
+        int[] Arr = findMinMax(arr, N);
+        System.out.print("Maximum is: " + Arr[1]);
+        System.out.print("\n"
+                         + "Minimum is: " + Arr[0]);
+    }
+
+}
+2:  Find the largest and smallest number in a given series of numbers?
+            int[] series = {25,400,345,71,33,511,666,786,332,44,81};
+
+            Largest = ?
+            Smallest = ?
+Code------------------------------------------------------------------
+package start;
+import java.util.*;
+
+
+public class CharacterSum {
+	static long ASCIIWordSum(String str, long sumArr[])
+    {
+        int l = str.length();
+        int pos = 0;
+        long sum = 0;
+        long bigSum = 0;
+        for (int i = 0; i < l; i++) {
+ 
+            
+            if (str.charAt(i) == ' ') {
+ 
+                bigSum += sum;
+                sumArr[pos++] = sum;
+                sum = 0;
+            }
+            else
+ 
+                
+                sum += str.charAt(i);            
+        }
+ 
+        
+        sumArr[pos] = sum;
+        bigSum += sum;
+        return bigSum;
+    }
+ 
+    
+    public static void main(String args[])
+    {
+ 
+        String str = "Sarah";
+ 
+        
+        int ctr = 0;
+        for (int i = 0; i < str.length(); i++) 
+            if (str.charAt(i) == ' ')
+                ctr++;
+         
+        long sumArr[] = new long[ctr + 1];
+ 
+        
+        long sum = ASCIIWordSum(str, sumArr);
+ 
+        
+        System.out.println("Sum of ASCII values:");
+        for (int i = 0; i <= ctr; i++)
+        	System.out.print(sumArr[i] + " ");
+        System.out.println();
+        System.out.print("Total sum -> " + sum);
+    }
+
+}
