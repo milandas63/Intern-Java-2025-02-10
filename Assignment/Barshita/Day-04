@@ -1,0 +1,24 @@
+package caseflippersrc;
+
+public class caseflipper {
+
+	public static void main(String[] args) {
+		String input = "Quick Brown Fox Jumps Over The Lazy Dog"	;
+		StringBuilder result = new StringBuilder();
+		for (int i = 0; i < input.length(); i++) {
+			char c =input.charAt(i);
+			if (c >= 65 && c <= 90) {
+				result.append((char) (c +32));
+				}
+			else if (c >= 97 && c <= 122) {
+				result.append((char) (c - 32));
+			} 
+			else{
+				result.append(c);
+			}
+		}
+		System.out.println("Original:"+input);
+		System.out.println("Invert:"+result.toString());
+		
+	} 
+}
