@@ -73,16 +73,16 @@ public class FireException extends RuntimeException{
 public class FireExceptionDemo {
 	public static void main(String[] args) {
         try {
-            // Simulate a condition that triggers the FireException
+            
             System.out.println("Checking temperature...");
-            int temperature = 120; // Simulated temperature value
+            int temperature = 120; 
             if (temperature > 100) {
-                // Throw the custom FireException
+                
                 throw new FireException("Danger! Temperature is too high: " + temperature);
             }
             System.out.println("Temperature is normal.");
         } catch (FireException e) {
-            // Handle the custom exception
+            
             System.out.println("Caught FireException: " + e.getMessage());
         }
     }
