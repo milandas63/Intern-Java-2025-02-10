@@ -1,0 +1,68 @@
+package java_2;
+//// Sum the ASCII values of the characters in a given String?
+      //      Example:    Sarah
+       //                 83 + 97 + 114 + 97 + 104 = ?
+
+public class Sum {
+
+	public static void main(String[] args) {
+		String name = "Sarah";
+		char each;
+		int sum = 0;
+
+		for (int i = 0; i < name.length(); i++) {
+			each = name.charAt(i);
+			sum = sum + ((int) each);
+		}
+
+		System.out.println(sum);
+
+	}
+}
+
+
+2:  Find the largest and smallest number in a given series of numbers?
+            int[] series = {25,400,345,71,33,511,666,786,332,44,81};
+
+            Largest = ?
+            Smallest = ?
+Code------------------------------------------------------------------
+
+ package java_2;
+
+public class LargestNumber_2 {
+	
+	//Find the largest and smallest number in a given series of numbers?
+    //  int[] series = {25,400,345,71,33,511,666,786,332,44,81};
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int[] numbers = { 25, 400, 345, 71, 33, 511, 666, 786, 332, 44, 81 };
+
+		int min = numbers[0];
+		int max = numbers[0];
+
+		for (int number : numbers) {
+			if (number < min) {
+				min = number;
+			}
+			if (number > max) {
+				max = number;
+			}
+
+			
+
+		}
+		System.out.println("Smallest: " + min);
+		System.out.println("Largest: " + max);
+
+	}
+
+}
+
+
+   
+        
+
+
