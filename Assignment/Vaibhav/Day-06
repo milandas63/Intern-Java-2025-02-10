@@ -1,0 +1,56 @@
+package java_2;
+
+public class Encoder {
+
+	// If HELLO is encoded as NKRRU then what is the code for BACHELOR and ZERO?
+	public static String encode(String word, int shift) {
+		StringBuilder encoded = new StringBuilder();
+		for (char c : word.toCharArray()) {
+
+			if (Character.isLetter(c)) {
+				char base = Character.isUpperCase(c) ? 'A' : 'a';
+				char encodedChar = (char) ((c - base + shift) % 26 + base);
+				encoded.append(encodedChar);
+			} else {
+				encoded.append(c);
+			}
+		}
+		return encoded.toString();
+	}
+
+	public static void main(String[] args) {
+		String word1 = "BACHELOR";
+		String word2 = "ZERO";
+		int shift = 6;
+
+		System.out.println("Encoded BACHELOR: " + encode(word1, shift));
+		System.out.println("Encoded ZERO: " + encode(word2, shift));
+	}
+}
+
+
+
+
+package java_2;
+
+public class Rearrange {
+
+	/// Arrange a text "I am working in the engineering college"
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String text = "I am working in the engineering college";
+		String[] words = text.split(" "); // Split sentence in words
+
+		StringBuilder rs = new StringBuilder(); // reverse the string
+
+		for (int i = words.length - 1; i >= 0; i--) {
+			rs.append(words[i]).append(" ");
+
+		}
+		System.out.println(rs.toString().trim());
+
+	}
+
+}
