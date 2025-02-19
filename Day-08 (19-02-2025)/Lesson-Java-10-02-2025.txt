@@ -788,3 +788,41 @@ MILAN DAS                   7978168568  milan.das@iigvarsity.com            mila
             |  |  |  |  +- TooYoungAgeException
             |  |  |  |  +- TooOldAgeException
 
+    =   ASSIGNMENT:
+        Write a program to take a username and password from the user and validate
+        the credentials with the array of valid credentials.
+
+            +-----------------------------------+
+            |            L O G I N              |
+            |                                   |
+            |                                   |
+            |    Username: |||||||||||||||||    |
+            |    Password: |||||||||||||||||    |
+            |                                   |
+            |                                   |
+            |      +--------+   +--------+      |
+            |      |  Save  |   |  Exit  |      |
+            |      +--------+   +--------+      |
+            |                                   |
+            +-----------------------------------+
+
+        String[][] users = { {"Milan", "9778911223"},
+                             {"Vaibhav", "8484825894"},
+                             {"Chinmaya", "9040233900"},
+                             {"Barshita", "7684806111"}
+                           };
+
+        Object
+        +- Throwable
+        |  +- Exception
+        |  |  +- LoginException
+        |  |  |  +- UsernameException
+        |  |  |  |  +- StartUppercaseCharacterException            // if starts with lowercase
+        |  |  |  |  +- TooShortLengthUsernameException             // if less than 5 characters
+        |  |  |  |  +- TooLongLengthUsernameException              // if greater than 20 characters
+        |  |  |  |  +- UseOfNonAlphabeticCharacterException        // if contains non alphabetic characters
+        |  |  |  |  +- UsernameNotFoundException                   // if the username doesn't exists
+        |  |  |  +- PasswordException
+        |  |  |  |  +- TooShortLengthPasswordException             // if less than 8 characters
+        |  |  |  |  +- TooLongLengthPasswordException              // if greater than 20 character
+        |  |  |  |  +- PasswordDoesnotMatchException               // if password doesn't match corresponding to username
