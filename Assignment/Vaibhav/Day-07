@@ -53,3 +53,39 @@ public class Exception {
 }
 
 
+Write a program to create an unchecked user-defined exception in the name
+            "FireException".
+
+package java_2;
+
+public class Fire_exception extends RuntimeException {
+	public Fire_exception(String message) {
+        super(message); 
+    }
+	
+	
+
+	public static void main(String[] args) {
+		 try {
+	            
+	            System.out.println("Checking temperature...");
+	            int temperature = 120; 
+	            if (temperature > 100) {
+	                
+	                throw new Fire_exception("Danger! Temperature is too high: " + temperature);
+	            }
+	            System.out.println("Temperature is normal.");
+	        } catch (Fire_exception e) {
+	            
+	            System.out.println("Caught FireException: " + e.getMessage());
+	        }
+	    }
+
+		
+
+	}
+
+
+
+
+
