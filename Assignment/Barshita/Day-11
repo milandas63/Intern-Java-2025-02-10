@@ -1,0 +1,85 @@
+ ASSIGNMENT:
+        Write a program to create a form with the following fields:
+            1.  Employee code
+            2.  Employee name
+            3.  Father's name
+            4.  Present address
+            5.  Gender
+            6.  Date of Birth
+            7.  Date of Joining
+            8.  Designation
+            9.  Email-id
+            10. Mobile number
+
+
+package com.io;
+import java.io.*;
+
+public class Datainput {
+	private BufferedReader br;
+	private BufferedWriter bw;
+	private boolean more;
+	private String code,name,father,address,gender,dob,doj,designation,email,mobile;
+	private StringBuffer buf;
+	
+	public Datainput() {
+		try {
+			br = new BufferedReader(new InputStreamReader(System.in));
+			bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("student.csv")));
+			more = true;
+			while(more) {
+				for(int i=0; i<35; i++) System.out.println();
+				
+				System.out.println("Employee Information Center");
+				System.out.println("--------------------------");
+				System.out.println();
+				System.out.print("1. Employee Code: ");
+				code = br.readLine();
+				System.out.print("2. Employee's Name:  ");
+				name = br.readLine();
+				System.out.print("3. Father's Name:  ");
+				father = br.readLine();
+				System.out.print("4. Present Address:  ");
+				address = br.readLine();
+				System.out.print("5. Gender:        ");
+				gender=br.readLine();
+				System.out.print("6. Date-of-Birth:  ");
+				dob = br.readLine();
+				System.out.print("7. Date-of-Joining:  ");
+				doj = br.readLine();
+				System.out.print("8. Designation:  ");
+				designation = br.readLine();
+				System.out.print("9. Email-id:      ");
+				email = br.readLine();
+				System.out.print("10. Mobile No.:   ");
+				mobile = br.readLine();
+				
+				buf = new StringBuffer();
+				buf.append(code+",");
+				buf.append(name+",");
+				buf.append(father+",");
+				buf.append(address+",");
+				buf.append(gender+",");
+				buf.append(dob+"\r\n");
+				buf.append(doj+",");
+				buf.append(designation+",");
+				buf.append(email+",");
+				buf.append(mobile+",");
+				bw.write(buf.toString());
+				
+				System.out.println();
+				System.out.println();
+				System.out.print("More [y/n]: ");
+				more = br.readLine().toUpperCase().startsWith("Y");
+			}
+			br.close();
+			bw.close();
+		} catch(IOException e) {
+		}
+	}
+
+	public static void main(String[] args) {
+		new Datainput();
+	}
+}
+
