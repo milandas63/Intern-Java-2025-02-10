@@ -1068,9 +1068,9 @@ MILAN DAS                   7978168568  milandas63@gmail.com                mila
 +---------------------+
 | Tuesday, 11-03-2025 |  Day-19
 +---------------------+
-    =   Bobble 
-    =   Selection
-    =   Insert
-
+    =   Bubble Sort
+    =   Selection Sort
+    =   Insert Sort
+    =   Shell Sort
 
 
