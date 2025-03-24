@@ -69,7 +69,9 @@ INSERT INTO contact VALUES
 SELECT "contact-end";
 
 
-SELECT c.con_id,c.con_name,c.gender,c.mobile_no,r.rel_desc,l.loc_desc FROM contact AS c LEFT JOIN relation AS r ON r.rel_id=c.con_id LEFT JOIN location AS l ON l.loc_id=c.loc_id
+SELECT c.con_id,c.con_name,c.gender,c.mobile_no,r.rel_desc,l.loc_desc FROM contact AS c LEFT JOIN relation AS r ON r.rel_id=c.con_id LEFT JOIN location AS l ON l.loc_id=c.loc_id;
+
+SELECT c.con_id AS 'ID',c.con_name AS 'NAME',c.gender AS 'SEX',c.mobile_no AS 'PHONE',r.rel_desc AS 'RELATIONSHIP',l.loc_desc AS 'LOCATION' FROM contact AS c LEFT JOIN relation AS r ON r.rel_id=c.con_id LEFT JOIN location AS l ON l.loc_id=c.loc_id;
 
 
 
