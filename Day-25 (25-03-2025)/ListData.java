@@ -18,19 +18,20 @@ public class ListData {
 			//System.out.println(rs.isBeforeFirst()+" "+rs.isAfterLast());
 			//System.out.println(rs.getInt("ID"));
 
+			
 			for(int i=1; i<=rsmd.getColumnCount(); i++) {
-				System.out.print(rsmd.getColumnLabel(i)+" ");
+				System.out.print(padC(rsmd.getColumnLabel(i),rsmd.getColumnDisplaySize(i))+" ");
 			}
 			System.out.println();
 			
 			while(rs.next()) {
 				System.out.println(
-						rs.getInt("ID")+" "+
-						rs.getString("NAME")+" "+
-						rs.getString("SEX")+" "+
-						rs.getString("PHONE")+" "+
-						rs.getString("RELATIONSHIP")+" "+
-						rs.getString("LOCATION")
+						padR(rs.getString("ID"),rsmd.getColumnDisplaySize(1))+" "+
+						padR(rs.getString("NAME"),rsmd.getColumnDisplaySize(2))+" "+
+						padR(rs.getString("SEX"),rsmd.getColumnDisplaySize(3))+" "+
+						padR(rs.getString("PHONE"),rsmd.getColumnDisplaySize(4))+" "+
+						padR(rs.getString("RELATIONSHIP"),rsmd.getColumnDisplaySize(5))+" "+
+						padR(rs.getString("LOCATION"),rsmd.getColumnDisplaySize(6))
 				);
 			}
 
@@ -41,7 +42,26 @@ public class ListData {
 		} catch(SQLException e) {
 		} catch(Exception e) {
 		}
-		
+	}
+
+	private String padC(String data, int width) {
+		StringBuffer buf = new StringBuffer(data);
+		for(int i=data.length(); i<width; i++) {
+			if(i%2==0) {
+				buf.append(" ");
+			} else {
+				buf.insert(0," ");
+			}
+		}
+		return buf.toString();
+	}
+	
+	private String padR(String data, int width) {
+		StringBuffer buf = new StringBuffer(data);
+		for(int i=data.length(); i<width; i++) {
+			buf.append(" ");
+		}
+		return buf.toString();
 	}
 
 	public static void main(String[] args) {
