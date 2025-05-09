@@ -1,0 +1,33 @@
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num <= 3) return true;
+  if (num % 2 === 0 || num % 3 === 0) return false;
+  for (let i = 5; i * i <= num; i += 6) {
+    if (num % i === 0 || num % (i + 2) === 0) return false;
+  }
+  return true;
+}
+
+function displayPrimesInRange(start, end) {
+  if (start > end || start < 0 || end < 0) {
+    return "Invalid input: Please provide a valid range.";
+  }
+
+  const primes = [];
+  for (let i = start; i <= end; i++) {
+    if (isPrime(i)) {
+      primes.push(i);
+    }
+  }
+
+  if (primes.length === 0) {
+    return `No prime numbers found in the range ${start} to ${end}.`;
+  } else {
+    return `Prime numbers between ${start} and ${end} are: ${primes.join(', ')}`;
+  }
+}
+
+const startRange = 1000;
+const endRange = 2000;
+const result = displayPrimesInRange(startRange, endRange);
+console.log(result);
